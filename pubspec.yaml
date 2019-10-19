@@ -37,9 +37,15 @@ dependencies:
   mime: ^0.9.6+3
   dio: ^3.0.3
 
+  
   # UI Utilities
   functional_widget_annotation: ^0.5.1
-  flutter_platform_widgets: ^0.20.1
+  flutter_platform_widgets:
+    git:
+        url: git://github.com/aqwert/flutter_platform_widgets
+        ref: beta-1.10.7
+
+
 
   # UI Widgets
   flare_splash_screen: ^2.1.3
