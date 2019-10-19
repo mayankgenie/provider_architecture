@@ -18,7 +18,6 @@ USER gitpod
 
 RUN cd /home/gitpod && \
     wget -qO flutter_sdk.tar.xz \
-     cd ~/development
     https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.5-stable.tar.xz &&\
     tar -xvf flutter_sdk.tar.xz && \
     rm -f flutter_sdk.tar.xz
