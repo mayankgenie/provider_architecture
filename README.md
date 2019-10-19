@@ -72,3 +72,12 @@ Filled Stacks Links:
 - Change icon `assets/images/logo.png` another image
 - If new icon has a different path update `flutter_icons:` in the `pubspec.yaml` file
 - Run flutter `flutter pub get` and then `flutter pub run flutter_launcher_icons:main`
+
+
+# Here is your awesome Open in Gitpod badge
+
+```md
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/servplatformprovider_architecture)
+```
+
+![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)
