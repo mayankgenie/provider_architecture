@@ -1,5 +1,11 @@
 FROM gitpod/workspace-full-vnc:branch-jx-python-tk
 
+USER root
+
+ENV ANDROID_HOME=/home/gitpod/android-sdk \
+    FLUTTER_HOME=/home/gitpod/flutter
+
+
 RUN add-apt-repository ppa:maarten-fonville/android-studio && \
     apt-get update && \
     apt-get install android-sdk \
@@ -8,14 +14,7 @@ RUN add-apt-repository ppa:maarten-fonville/android-studio && \
         android-sdk-platform-23 --no-install-recommends --yes \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
-
-
-ENV ANDROID_HOME=/home/gitpod/android-sdk \
-    FLUTTER_HOME=/home/gitpod/flutter
-
-USER root
-
-RUN curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list && \
     apt-get update && \
     apt-get -y install build-essential dart libkrb5-dev gcc make gradle android-tools-adb android-tools-fastboot openjdk-8-jdk && \
