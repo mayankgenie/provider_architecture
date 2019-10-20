@@ -1,10 +1,5 @@
 FROM gitpod/workspace-full-vnc:branch-jx-python-tk
 
-USER root
-
-ENV ANDROID_HOME=/home/gitpod/android-sdk \
-    FLUTTER_HOME=/home/gitpod/flutter
-
 
 RUN add-apt-repository ppa:maarten-fonville/android-studio && \
     apt-get update && \
@@ -22,6 +17,13 @@ RUN add-apt-repository ppa:maarten-fonville/android-studio && \
     apt-get -y autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*;
+    
+USER root
+
+ENV ANDROID_HOME=/home/gitpod/android-sdk \
+    FLUTTER_HOME=/home/gitpod/flutter
+
+
 
 USER gitpod
 
