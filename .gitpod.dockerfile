@@ -1,4 +1,13 @@
-FROM gitpod/workspace-full:latest
+FROM gitpod/workspace-full-vnc:branch-jx-python-tk
+RUN add-apt-repository ppa:maarten-fonville/android-studio && \
+    apt-get update && \
+    apt-get install android-sdk \
+        lib32stdc++6 \
+        android-studio \
+        android-sdk-platform-23 --no-install-recommends --yes \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/*
+
 
 ENV ANDROID_HOME=/home/gitpod/android-sdk \
     FLUTTER_HOME=/home/gitpod/flutter
