@@ -1,4 +1,5 @@
 FROM gitpod/workspace-full-vnc:branch-jx-python-tk
+
 RUN add-apt-repository ppa:maarten-fonville/android-studio && \
     apt-get update && \
     apt-get install android-sdk \
